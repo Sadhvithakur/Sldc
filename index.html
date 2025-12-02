@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrician — Home</title>
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Index page: same as services - 4.jpg background covering whole screen */
+        body,
+        html {
+            background-image: url('image/4.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Semi-transparent cards like services page */
+        .uk-card,
+        .uk-card-default,
+        .uk-card-body {
+            background-color: rgba(255, 255, 255, 0.85) !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            color: #0b2340 !important;
+            box-shadow: 0 6px 18px rgba(11, 35, 64, 0.06);
+            backdrop-filter: blur(4px);
+        }
+
+        .uk-card:hover,
+        .uk-card-default:hover,
+        .uk-card-body:hover {
+            background-color: rgba(255, 255, 255, 0.90) !important;
+        }
+
+        .uk-card-title {
+            color: #0b2340 !important;
+        }
+
+        /* Keep sections transparent to show background */
+        .uk-section {
+            background: transparent !important;
+        }
+
+        /* Footer visible with solid background */
+        footer.uk-section {
+            background: #0b2340 !important;
+            color: #dfefff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header uk-background-muted">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-middle uk-padding-small">
+                <div class="brand">
+                    <h1 class="uk-heading-primary"><a href="#" class="logo">SLD Technologies</a></h1>
+                </div>
+
+            </div>
+        </div>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <div class="uk-container">
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        <li class="uk-active"><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-nav" href="#"
+                        aria-label="Open menu">
+                        <span uk-navbar-toggle-icon></span>
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero uk-section uk-section-large uk-flex uk-flex-middle" id="home">
+        <div class="uk-container">
+            <div class="uk-grid-large" uk-grid>
+                <div class="uk-width-2-3@s">
+                    <h2 class="uk-heading-medium">Trusted Local Electricians — Fast, Safe, Reliable</h2>
+                    <p class="uk-text-lead">Residential & commercial electrical services, emergency repairs, rewiring,
+                        meter installation and more. Serving Bangalore with experienced technicians.</p>
+                    <div class="uk-margin-top">
+                        <a class="uk-button uk-button-default" href="services.html">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="uk-section uk-section-small">
+        <div class="uk-container">
+            <h2 class="uk-heading-line" style="color: #ffffff;"><span style="color: #ffffff;">Explore</span></h2>
+            <div class="uk-grid-match uk-child-width-1-2@m uk-grid-small" uk-grid>
+                <div>
+                    <a class="uk-card uk-card-default uk-card-body uk-link-toggle" href="services.html">
+                        <h3 class="uk-card-title">Our Services</h3>
+                        <p class="uk-text-muted">View full list of electrical services: wiring, repairs, installations.
+                        </p>
+                        <span class="uk-position-bottom-right uk-text-small">Learn more →</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="uk-card uk-card-default uk-card-body uk-link-toggle" href="about.html">
+                        <h3 class="uk-card-title">About Us</h3>
+                        <p class="uk-text-muted">Who we are, certifications, values and our team.</p>
+                        <span class="uk-position-bottom-right uk-text-small">Learn more →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="uk-section uk-section-small uk-text-center">
+        <div class="uk-container">
+            <p>&copy; 2025 SLD Technologies — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/uikit-icons.js"></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/hyperspeed.js"></script>
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="uk-margin-top"><a class="uk-button uk-button-primary uk-width-1-1" href="services.html">Request
+                    Service</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

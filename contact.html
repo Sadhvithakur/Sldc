@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact — Electrician</title>
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        main.uk-section {
+            background: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header uk-background-muted">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-middle uk-padding-small">
+                <div class="brand">
+                    <h1 class="uk-heading-primary"><a href="index.html" class="logo">SLD Technologies</a></h1>
+                </div>
+                <div class="contact-small uk-visible@s">
+                    <a href="tel:6363511990">6363511990</a>
+                </div>
+            </div>
+        </div>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <div class="uk-container">
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="uk-active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-nav" href="#"
+                        aria-label="Open menu">
+                        <span uk-navbar-toggle-icon></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="uk-section uk-section-default">
+        <div class="uk-container uk-container-small">
+            <h2>Request a Service</h2>
+            <form class="uk-form-stacked" action="#"
+                onsubmit="alert('This is a demo form — configure your backend.'); return false;">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="name">Name</label>
+                    <div class="uk-form-controls"><input class="uk-input" id="name" type="text" placeholder="Your name">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="phone">Phone</label>
+                    <div class="uk-form-controls"><input class="uk-input" id="phone" type="tel"
+                            placeholder="Phone number"></div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="message">Message</label>
+                    <div class="uk-form-controls"><textarea class="uk-textarea" id="message" rows="4"
+                            placeholder="Brief description"></textarea></div>
+                </div>
+                <button class="uk-button uk-button-secondary">Send Request</button>
+            </form>
+
+            <h3 class="uk-margin-large-top">Contact Details</h3>
+            <p><strong>Phone:</strong> <a href="tel:6363511990">6363511990</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@electrician.example">info@electrician.example</a></p>
+            <p><strong>Address:</strong> Bangalore, India</p>
+        </div>
+    </main>
+
+    <footer class="uk-section uk-section-small uk-text-center">
+        <div class="uk-container">
+            <p>&copy; 2025 SLD Technologies — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/uikit-icons.js"></script>
+    <script src="js/uikit.js"></script>
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="uk-active"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="uk-margin-top"><a class="uk-button uk-button-primary uk-width-1-1" href="contact.html">Request
+                    Service</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

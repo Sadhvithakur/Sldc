@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SLD Technologies - Our Services</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Services page background image - cover whole screen */
+        body,
+        html {
+            background-image: url('image/3.jpeg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Slightly translucent tiles for this page */
+        .services-page .uk-card,
+        .services-page .uk-card-default,
+        .services-page .uk-card-body {
+            background-color: rgba(255, 255, 255, 0.85) !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            color: #0b2340 !important;
+            box-shadow: 0 6px 18px rgba(11, 35, 64, 0.06);
+            backdrop-filter: blur(4px);
+        }
+
+        .services-page .uk-card:hover,
+        .services-page .uk-card-default:hover,
+        .services-page .uk-card-body:hover {
+            background-color: rgba(255, 255, 255, 0.90) !important;
+        }
+
+        .services-page .uk-card h3,
+        .services-page .uk-card h4,
+        .services-page .uk-card .uk-card-title {
+            color: #0b2340 !important;
+        }
+
+        /* Ensure all cards have equal height */
+        .services-page .uk-grid-small>div {
+            display: flex;
+        }
+
+        .services-page .uk-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .services-page .uk-card.uk-flex {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        /* Let sections be slightly transparent so background is visible */
+        .uk-section {
+            background: transparent !important;
+        }
+
+        /* White panel for the hero/title so text is always visible */
+        .page-hero {
+            background: #ffffff;
+            color: #0b2340;
+            padding: 40px 20px;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(11, 35, 64, 0.08);
+        }
+
+        .page-hero .uk-heading-line span {
+            color: #0b2340;
+        }
+
+        .page-hero .uk-text-lead {
+            color: #475d6a;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+        /* Align headings and lists inside the "Complete Electrical Contracting Works" grid */
+        .uk-card .uk-grid-small>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0;
+        }
+
+        .uk-card .uk-grid-small h4 {
+            margin: 0 0 12px 0;
+            font-weight: 600;
+            color: #0b2340 !important;
+            font-size: 16px;
+        }
+
+        .uk-card .uk-grid-small ul {
+            margin: 0 0 16px 0;
+            padding-left: 1.25rem;
+            list-style-position: inside;
+        }
+
+        .uk-card .uk-grid-small li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        /* Override black background for main section - keep transparent to show body background */
+        main.uk-section {
+            background: transparent !important;
+        }
+
+        /* Make footer visible with solid background */
+        footer.uk-section {
+            background: #0b2340 !important;
+            color: #dfefff;
+        }
+    </style>
+</head>
+
+<body class="services-page">
+    <div id="wallpaper-2" class="wallpaper-image" aria-hidden="true"></div>
+    <header class="site-header uk-background-muted">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-middle uk-padding-small">
+                <div class="brand">
+                    <h1 class="uk-heading-primary"><a href="index.html" class="logo">SLD Technologies</a></h1>
+                </div>
+
+            </div>
+        </div>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <div class="uk-container">
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="uk-active"><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-nav" href="#"
+                        aria-label="Open menu">
+                        <span uk-navbar-toggle-icon></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="uk-section uk-section-default">
+        <div class="uk-container">
+            <div class="uk-section uk-section-default uk-padding-remove-top uk-padding-remove-bottom">
+                <div class="uk-container uk-text-center page-hero">
+                    <h1 class="uk-heading-line"><span>Our Services</span></h1>
+                    <p class="uk-text-lead">Reliable • Professional • End-to-End Electrical Solutions</p>
+                </div>
+            </div>
+
+            <!-- Service blocks -->
+            <div class="uk-grid-small uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-flex">
+                        <div class="uk-width-auto uk-flex-middle uk-text-center" style="min-width:72px">
+                            <i class="fa-solid fa-bolt" style="font-size:32px;color:var(--brand)"></i>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h3 class="uk-card-title">1. Awarded Electrical Projects</h3>
+                            <ul>
+                                <li>Layout electrification</li>
+                                <li>Feeder line upgrades & underground cabling</li>
+                                <li>Pole shifting & transformer relocation</li>
+                                <li>Design, approvals, supply, installation, testing & commissioning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-flex">
+                        <div class="uk-width-auto uk-flex-middle uk-text-center" style="min-width:72px">
+                            <i class="fa-solid fa-charging-station" style="font-size:32px;color:var(--brand)"></i>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h3 class="uk-card-title">2. Transformer Supply & Service</h3>
+                            <ul>
+                                <li>Distribution & power transformers (25 kVA – 5 MVA)</li>
+                                <li>Oil-cooled, dry-type & energy-efficient models</li>
+                                <li>Installation, replacement & testing</li>
+                                <li>Oil filtration, breakdown service & AMC</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-flex">
+                        <div class="uk-width-auto uk-flex-middle uk-text-center" style="min-width:72px">
+                            <i class="fa-solid fa-server" style="font-size:32px;color:var(--brand)"></i>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h3 class="uk-card-title">3. HT/LT Panel Supply & Service</h3>
+                            <ul>
+                                <li>VCB & RMU Panels</li>
+                                <li>APFC & Capacitor Panels</li>
+                                <li>MDB, Metering, Control & Relay Panels</li>
+                                <li>Panel retrofitting & breaker servicing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-flex">
+                        <div class="uk-width-auto uk-flex-middle uk-text-center" style="min-width:72px">
+                            <i class="fa-solid fa-cable-car" style="font-size:32px;color:var(--brand)"></i>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h3 class="uk-card-title">4. Supply of Cables & Electrical Materials</h3>
+                            <ul>
+                                <li>HT & LT Cables</li>
+                                <li>XLPE, Armoured, Flexible & AB Cables</li>
+                                <li>Control & communication cables</li>
+                                <li>Lighting, earthing & industrial switchgear</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-flex">
+                        <div class="uk-width-auto uk-flex-middle uk-text-center" style="min-width:72px">
+                            <i class="fa-solid fa-file-contract" style="font-size:32px;color:var(--brand)"></i>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h3 class="uk-card-title">5. Private & Government Tender Execution</h3>
+                            <ul>
+                                <li>HT/LT line works</li>
+                                <li>Street lighting projects</li>
+                                <li>Layout electrification</li>
+                                <li>Substation & transformer works</li>
+                                <li>Documentation, estimation & compliance handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-flex">
+                        <div class="uk-width-auto uk-flex-middle uk-text-center" style="min-width:72px">
+                            <i class="fa-solid fa-square-poll-vertical" style="font-size:32px;color:var(--brand)"></i>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h3 class="uk-card-title">6. HT/LT Kiosk Supply & Service</h3>
+                            <ul>
+                                <li>Outdoor & indoor kiosks</li>
+                                <li>BESCOM, MESCOM, HESCOM & CESC-compliant</li>
+                                <li>Installation, testing & commissioning</li>
+                                <li>Repairs & replacement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-width-1-1">
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">7. Complete Electrical Contracting Works</h3>
+
+                        <div class="uk-grid-small uk-child-width-1-2@m uk-child-width-1-1@s" uk-grid>
+
+                            <!-- HT/LT Power Works -->
+                            <div>
+                                <h4>HT/LT Power Works</h4>
+                                <ul>
+                                    <li>Line construction</li>
+                                    <li>UG cable laying, jointing & termination</li>
+                                    <li>Transformer yard setup</li>
+                                    <li>RMU/VCB installation & energization</li>
+                                </ul>
+                            </div>
+
+                            <!-- Residential Works -->
+                            <div>
+                                <h4>Residential Works</h4>
+                                <ul>
+                                    <li>Wiring & rewiring</li>
+                                    <li>Load enhancement</li>
+                                    <li>Home automation & safety devices</li>
+                                    <li>Lighting design & panel installation</li>
+                                </ul>
+                            </div>
+
+                            <!-- Commercial Works -->
+                            <div>
+                                <h4>Commercial Works</h4>
+                                <ul>
+                                    <li>Office & showroom electrification</li>
+                                    <li>UPS, network cabling & lighting</li>
+                                    <li>DBs & panel boards</li>
+                                    <li>Energy-efficient electrical upgrades</li>
+                                </ul>
+                            </div>
+
+                            <!-- Industrial Works -->
+                            <div>
+                                <h4>Industrial Works</h4>
+                                <ul>
+                                    <li>HT/LT industrial installations</li>
+                                    <li>Substation works</li>
+                                    <li>Machine power wiring</li>
+                                    <li>Earthing grids & lightning protection</li>
+                                </ul>
+                            </div>
+
+                            <!-- Layout Electrification -->
+                            <div>
+                                <h4>Layout Electrification</h4>
+                                <ul>
+                                    <li>HT/LT line extension</li>
+                                    <li>Pole erection & street lighting</li>
+                                    <li>Transformer installation & foundations</li>
+                                    <li>Feeder pillars, trenching & approvals</li>
+                                </ul>
+                            </div>
+
+                            <!-- BESCOM / Utility Services -->
+                            <div>
+                                <h4>BESCOM / Utility Services</h4>
+                                <ul>
+                                    <li>Name transfer</li>
+                                    <li>New connections</li>
+                                    <li>Load addition/reduction</li>
+                                    <li>Tariff change & meter shifting</li>
+                                </ul>
+                            </div>
+
+                            <!-- Additional Services -->
+                            <div>
+                                <h4>Additional Services</h4>
+                                <ul>
+                                    <li>Earthing & lightning protection</li>
+                                    <li>Energy audits & power quality improvement</li>
+                                    <li>Generator, solar & UPS integration</li>
+                                    <li>Emergency repair & AMC services</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        </div>
+        </div>
+    </main>
+
+    <footer class="uk-section uk-section-small uk-text-center">
+        <div class="uk-container">
+            <p>&copy; 2025 SLD Technologies — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/uikit-icons.js"></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/wallpaper.js"></script>
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li><a href="index.html">Home</a></li>
+                <li class="uk-active"><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="uk-margin-top"><a class="uk-button uk-button-primary uk-width-1-1" href="services.html">Our
+                    Services</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

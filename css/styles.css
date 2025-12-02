@@ -1,0 +1,221 @@
+/* Design-inspired styles for the electrician homepage */
+
+:root {
+    --brand: #0f4c81;
+    --accent: #2b7cc9;
+    --brand-rgb: 15, 76, 129;
+    --overlay-alpha: 0.36;
+    --muted: #f7fbff;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+a {
+    color: var(--accent);
+}
+
+.site-header .logo {
+    text-decoration: none;
+    color: var(--brand);
+}
+
+/* Make header sticky (live) and slightly translucent so background animation shows */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(8, 20, 40, 0.06);
+}
+
+/* Navbar link defaults */
+.uk-navbar-nav>li>a {
+    color: rgba(0, 0, 0, 0.6);
+    padding: 10px 12px;
+    border-radius: 6px;
+    transition: all 180ms ease;
+}
+
+/* White tile for active nav item and hover */
+.uk-navbar-nav>li.uk-active>a,
+.uk-navbar-nav>li>a:hover {
+    background: #ffffff;
+    color: var(--brand) !important;
+    box-shadow: 0 6px 18px rgba(15, 76, 129, 0.08);
+    transform: translateY(-1px);
+}
+
+/* Ensure the small-screen offcanvas nav shows a clear active state */
+.uk-offcanvas-bar .uk-nav .uk-active>a {
+    background: #ffffff;
+    color: var(--brand);
+    border-radius: 6px;
+}
+
+.hero {
+    color: #fff;
+}
+
+.hero .uk-heading-medium {
+    color: #fff;
+    margin-top: 0;
+}
+
+.uk-section-muted {
+    background: #f6f9fc;
+}
+
+.uk-card-title {
+    color: var(--brand);
+}
+
+.uk-section-primary {
+    background: linear-gradient(180deg, var(--brand), var(--accent));
+}
+
+footer {
+    background: #0b2340;
+    color: #dfefff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .contact-small {
+        display: none;
+    }
+}
+
+/* Make images and cards adapt on small/tablet */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure buttons stack nicely on small screens */
+@media (max-width: 800px) {
+    .uk-button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .uk-navbar-right {
+        display: none;
+    }
+
+    .uk-navbar-nav.uk-visible\@m {
+        display: none;
+    }
+
+    .uk-navbar-toggle.uk-hidden\@m {
+        display: inline-flex;
+    }
+}
+
+/* Cards spacing on small devices */
+@media (max-width: 900px) {
+    .uk-grid-match>div {
+        margin-bottom: 16px;
+    }
+}
+
+/* Improve form layout on small screens */
+@media (max-width: 640px) {
+
+    .uk-form-stacked .uk-form-controls input,
+    .uk-form-stacked .uk-form-controls textarea {
+        width: 100%;
+    }
+}
+
+/* Hyperspeed background canvas */
+.hyperspeed-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: transparent;
+    mix-blend-mode: normal;
+    /* less aggressive blending */
+    opacity: 0.55;
+    /* lower intensity so content remains readable */
+}
+
+/* Optional: slightly darken content for better contrast */
+body {
+    background-color: #000;
+}
+
+/* Make page sections transparent so the canvas shows through */
+.uk-section {
+    background: transparent !important;
+}
+
+/* Hero overlay to keep text readable while showing the hyperspeed animation */
+.hero {
+    position: relative;
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(var(--brand-rgb), var(--overlay-alpha)) 0%, rgba(var(--brand-rgb), calc(var(--overlay-alpha) - 0.08)) 100%);
+}
+
+.hero .uk-container {
+    position: relative;
+    z-index: 2;
+    /* keep content above overlay and canvas */
+}
+
+/* Improve hero text readability */
+.hero h2,
+.hero .uk-heading-medium {
+    color: #ffffff;
+    text-shadow: 0 6px 18px rgba(2, 8, 20, 0.25);
+}
+
+.hero p,
+.hero .uk-text-lead {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Make sure buttons stand out */
+.hero .uk-button.uk-button-secondary {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.hero .uk-button.uk-button-default {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Mobile and reduced-motion fallback: hide the canvas to preserve battery and accessibility */
+@media (max-width: 800px),
+(prefers-reduced-motion: reduce) {
+    .hyperspeed-canvas {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Make header fully opaque on mobile for readability */
+    .site-header {
+        background: #ffffff;
+        backdrop-filter: none;
+    }
+}
