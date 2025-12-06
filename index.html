@@ -50,6 +50,270 @@
             background: #0b2340 !important;
             color: #dfefff;
         }
+
+        /* Home page tablet centering (min-width: 768px and max-width: 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            /* Hero section centering */
+            .hero.uk-section {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                padding: 60px 20px !important;
+            }
+
+            .hero .uk-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 !important;
+            }
+
+            .hero .uk-grid-large {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-width: 720px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .hero .uk-width-2-3@s {
+                width: 100% !important;
+                max-width: 720px !important;
+                padding: 0 20px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .hero h2.uk-heading-medium {
+                text-align: center;
+                font-size: 28px !important;
+                line-height: 1.4;
+                margin-bottom: 16px;
+            }
+
+            .hero .uk-text-lead {
+                text-align: center;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 24px;
+            }
+
+            .hero .uk-button {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Explore section wrapper */
+            .uk-section-small {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 20px !important;
+            }
+
+            .uk-section-small>.uk-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 !important;
+            }
+
+            /* Explore heading */
+            .uk-section-small h2.uk-heading-line {
+                text-align: center;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .uk-section-small h2.uk-heading-line span {
+                display: block;
+            }
+        }
+
+        /* Home page mobile centering (max-width: 767px) */
+        @media (max-width: 767px) {
+            .hero.uk-section {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 16px !important;
+            }
+
+            .hero .uk-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 !important;
+            }
+
+            .hero .uk-grid-large {
+                display: flex !important;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                margin: 0 !important;
+            }
+
+            .hero .uk-width-2-3@s {
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .hero h2.uk-heading-medium {
+                font-size: 22px !important;
+                text-align: center;
+                line-height: 1.4;
+                margin-bottom: 12px;
+            }
+
+            .hero .uk-text-lead {
+                font-size: 14px;
+                text-align: center;
+                line-height: 1.6;
+                margin-bottom: 16px;
+            }
+
+            .hero .uk-button {
+                width: 100%;
+                display: block;
+            }
+
+            .uk-section-small {
+                padding: 30px 16px !important;
+            }
+
+            .uk-section-small h2.uk-heading-line {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Explore tiles - tablet centering (768px - 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            /* Center the Explore section container */
+            .uk-section-small {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 16px !important;
+            }
+
+            .uk-section-small>.uk-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Center the grid */
+            .uk-grid-match.uk-child-width-1-2@m {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto !important;
+                width: 100%;
+                max-width: 750px;
+                padding: 0 !important;
+            }
+
+            /* Center each tile wrapper */
+            .uk-grid-match.uk-child-width-1-2@m >div {
+                width: 100% !important;
+                max-width: 750px !important;
+                margin: 12px auto !important;
+                padding: 0 !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            /* Tile card styling */
+            .uk-grid-match.uk-child-width-1-2@m >div>a.uk-card {
+                width: 100% !important;
+                max-width: 750px !important;
+                padding: 28px !important;
+                border-radius: 8px !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .uk-grid-match.uk-child-width-1-2@m .uk-card-title {
+                font-size: 20px !important;
+                margin-bottom: 16px !important;
+            }
+
+            .uk-grid-match.uk-child-width-1-2@m .uk-text-muted {
+                font-size: 15px;
+                line-height: 1.6;
+                margin-bottom: 16px;
+            }
+
+            .uk-grid-match.uk-child-width-1-2@m .uk-position-bottom-right {
+                font-size: 14px;
+                align-self: flex-end;
+            }
+
+            /* Center the heading */
+            .uk-section-small h2.uk-heading-line {
+                text-align: center;
+                width: 100%;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                margin-bottom: 20px;
+            }
+
+            .uk-section-small h2.uk-heading-line span {
+                display: block;
+            }
+        }
+
+        /* Mobile: same size tiles */
+        @media (max-width: 640px) {
+            .uk-grid-match>div {
+                display: flex !important;
+            }
+
+            .uk-grid-match>div>a.uk-card {
+                min-height: 200px !important;
+                width: 100% !important;
+                padding: 20px !important;
+            }
+
+            .uk-grid-match .uk-card-title {
+                font-size: 16px !important;
+            }
+
+            .uk-grid-match .uk-text-muted {
+                font-size: 13px;
+            }
+
+            .uk-grid-match .uk-position-bottom-right {
+                font-size: 12px;
+            }
+        }
+
+        /* Tablet: center cards */
+        @media (max-width: 1024px) {
+            .uk-grid-match {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+
+            .uk-grid-match>div {
+                max-width: 90% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
     </style>
 </head>
 
@@ -99,7 +363,7 @@
     <section class="uk-section uk-section-small">
         <div class="uk-container">
             <h2 class="uk-heading-line" style="color: #ffffff;"><span style="color: #ffffff;">Explore</span></h2>
-            <div class="uk-grid-match uk-child-width-1-2@m uk-grid-small" uk-grid>
+            <div class="uk-grid-match uk-child-width-1-1 uk-child-width-1-2@m uk-grid-small" uk-grid>
                 <div>
                     <a class="uk-card uk-card-default uk-card-body uk-link-toggle" href="services.html">
                         <h3 class="uk-card-title">Our Services</h3>

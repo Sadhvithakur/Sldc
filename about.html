@@ -11,6 +11,140 @@
         main.uk-section {
             background: #ffffff !important;
         }
+
+        /* Tablet centering (min-width: 768px and max-width: 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            main.uk-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 20px !important;
+            }
+
+            main.uk-section>.uk-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 !important;
+            }
+
+            /* Center the grid and convert to single column */
+            .uk-grid-large.uk-flex-middle {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto !important;
+                width: 100%;
+                max-width: 720px;
+            }
+
+            /* Style text column */
+            .uk-grid-large>div.uk-width-1-2@s {
+                width: 100% !important;
+                max-width: 720px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding: 0 20px !important;
+                margin-bottom: 30px;
+            }
+
+            /* Style image column */
+            .uk-grid-large>div.uk-width-1-2@s img {
+                width: 100% !important;
+                max-width: 720px !important;
+                height: auto !important;
+            }
+
+            /* Text content styling */
+            .uk-grid-large h2.uk-heading-line {
+                text-align: center;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .uk-grid-large h2.uk-heading-line span {
+                display: block;
+                width: 100%;
+            }
+
+            .uk-grid-large .uk-text-lead {
+                text-align: center;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .uk-grid-large p {
+                text-align: left;
+                line-height: 1.6;
+                margin-bottom: 16px;
+            }
+
+            .uk-grid-large .uk-list {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .uk-grid-large h3 {
+                text-align: center;
+                margin-top: 24px;
+                margin-bottom: 16px;
+            }
+        }
+
+        /* Mobile adjustments (max-width: 767px) */
+        @media (max-width: 767px) {
+            main.uk-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 30px 16px !important;
+            }
+
+            main.uk-section>.uk-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 !important;
+            }
+
+            .uk-grid-large.uk-flex-middle {
+                display: flex !important;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                margin: 0 !important;
+            }
+
+            .uk-grid-large>div.uk-width-1-2@s {
+                width: 100% !important;
+                padding: 0 !important;
+                margin-bottom: 24px;
+            }
+
+            .uk-grid-large h2.uk-heading-line span {
+                display: block;
+            }
+
+            .uk-grid-large .uk-text-lead {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .uk-grid-large p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .uk-grid-large .uk-list li {
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+
+            .uk-grid-large h3 {
+                font-size: 18px;
+                margin-top: 20px;
+                margin-bottom: 12px;
+            }
+        }
     </style>
 </head>
 
