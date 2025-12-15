@@ -4,10 +4,40 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>About — Electrician</title>
+
+    <head>
+        <title>SLD Technologies - About Us</title>
+
+        <link rel="icon" type="image/jpeg" sizes="32x32" href="image/logo.jpeg">
+
+    </head>
+
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Logo styling for header */
+        .site-header .logo-image {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .site-header .logo-image {
+                height: 45px;
+            }
+        }
+
+        /* Hamburger menu positioning */
+        .uk-navbar-toggle.uk-hidden\@m {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 1000;
+        }
+
         main.uk-section {
             background: #ffffff !important;
         }
@@ -155,7 +185,9 @@
                 <div class="brand">
                     <h1 class="uk-heading-primary"><a href="index.html" class="logo">SLD Technologies</a></h1>
                 </div>
-
+                <div class="logo-container">
+                    <img src="image/logo.jpeg" alt="SLD Technologies Logo" class="logo-image">
+                </div>
             </div>
         </div>
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
@@ -165,6 +197,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li class="uk-active"><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-nav" href="#"
                         aria-label="Open menu">
@@ -239,6 +272,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li class="uk-active"><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="uk-margin-top"><a class="uk-button uk-button-primary uk-width-1-1" href="services.html">Our
                     Services</a></div>

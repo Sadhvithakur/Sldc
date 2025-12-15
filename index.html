@@ -4,10 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrician — Home</title>
+    <title>SLD Technologies — Home</title>
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="image/logo.jpeg">
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Logo styling for header */
+        .site-header .logo-image {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .site-header .logo-image {
+                height: 45px;
+            }
+        }
+
+        /* Hamburger menu positioning */
+        .uk-navbar-toggle.uk-hidden\@m {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 1000;
+        }
+
         /* Index page: same as services - 4.jpg background covering whole screen */
         body,
         html {
@@ -324,7 +348,9 @@
                 <div class="brand">
                     <h1 class="uk-heading-primary"><a href="#" class="logo">SLD Technologies</a></h1>
                 </div>
-
+                <div class="logo-container">
+                    <img src="image/logo.jpeg" alt="SLD Technologies Logo" class="logo-image">
+                </div>
             </div>
         </div>
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
@@ -334,6 +360,7 @@
                         <li class="uk-active"><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-nav" href="#"
                         aria-label="Open menu">
@@ -349,11 +376,21 @@
         <div class="uk-container">
             <div class="uk-grid-large" uk-grid>
                 <div class="uk-width-2-3@s">
-                    <h2 class="uk-heading-medium">Trusted Local Electricians — Fast, Safe, Reliable</h2>
-                    <p class="uk-text-lead">Residential & commercial electrical services, emergency repairs, rewiring,
-                        meter installation and more. Serving Bangalore with experienced technicians.</p>
-                    <div class="uk-margin-top">
-                        <a class="uk-button uk-button-default" href="services.html">Our Services</a>
+                    <h2 class="uk-heading-small" style="color: #ffffff;"> Govt. Licensed Class 1 Electrical Contractor
+                    </h2>
+                    <p class="uk-text-lead"> Awarded • Certified • Trusted
+                        Residential & commercial electrical services across Bangalore.</p>
+                    <div class="uk-margin-top uk-flex uk-flex-middle uk-grid-small" uk-grid>
+                        <div>
+                            <a class="uk-button uk-button-default" href="services.html">
+                                Our Services
+                            </a>
+                        </div>
+                        <div>
+                            <a class="uk-button uk-button-default" href="contact.html">
+                                Contact Us
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -399,6 +436,7 @@
                 <li class="uk-active"><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="uk-margin-top"><a class="uk-button uk-button-primary uk-width-1-1" href="services.html">Request
                     Service</a></div>

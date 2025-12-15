@@ -4,12 +4,208 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Contact — Electrician</title>
+    <title>SLD Technologies - Contact</title>
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="image/logo.jpeg">
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Logo styling for header */
+        .site-header .logo-image {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .site-header .logo-image {
+                height: 45px;
+            }
+        }
+
+        /* Hamburger menu positioning */
+        .uk-navbar-toggle.uk-hidden\@m {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 1000;
+        }
+
+        /* Contact page background image */
+        body,
+        html {
+            background-image: url('image/contact.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
         main.uk-section {
-            background: #ffffff !important;
+            background: transparent !important;
+        }
+
+        /* Slightly translucent cards */
+        .uk-card,
+        .uk-card-default,
+        .uk-card-body {
+            background-color: rgba(255, 255, 255, 0.85) !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            color: #0b2340 !important;
+            box-shadow: 0 6px 18px rgba(11, 35, 64, 0.06);
+            backdrop-filter: blur(4px);
+        }
+
+        .uk-card:hover,
+        .uk-card-default:hover,
+        .uk-card-body:hover {
+            background-color: rgba(255, 255, 255, 0.90) !important;
+        }
+
+        .uk-card h3,
+        .uk-card h4,
+        .uk-card .uk-card-title {
+            color: #0b2340 !important;
+        }
+
+        /* Tablet centering (min-width: 768px and max-width: 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            main.uk-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 20px !important;
+            }
+
+            main.uk-section>.uk-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 !important;
+            }
+
+            .uk-container-small {
+                max-width: 720px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .uk-grid-small {
+                margin: 0 auto !important;
+            }
+
+            h2.uk-text-center {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            main.uk-section>.uk-container>p {
+                font-size: 15px;
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Mobile responsiveness (max-width: 767px) */
+        @media (max-width: 767px) {
+            main.uk-section {
+                padding: 30px 15px !important;
+            }
+
+            .uk-container-small {
+                padding: 0 15px;
+                max-width: 100%;
+            }
+
+            h2.uk-text-center {
+                font-size: 22px;
+                margin-bottom: 12px !important;
+            }
+
+            main.uk-section>.uk-container>p {
+                font-size: 14px;
+                margin-bottom: 25px !important;
+            }
+
+            .uk-margin-large-top {
+                margin-top: 20px !important;
+            }
+
+            .uk-card-body {
+                padding: 20px !important;
+            }
+
+            .uk-card h3,
+            .uk-card h4 {
+                font-size: 18px !important;
+                margin: 0 0 15px 0 !important;
+            }
+
+            .uk-card p {
+                font-size: 14px !important;
+                margin-bottom: 12px !important;
+            }
+
+            .uk-card hr {
+                margin: 15px 0 !important;
+            }
+
+            .uk-list {
+                padding-left: 20px !important;
+            }
+
+            .uk-list-bullet>li {
+                font-size: 14px !important;
+                margin-bottom: 10px !important;
+            }
+        }
+
+        /* Small mobile devices (max-width: 480px) */
+        @media (max-width: 480px) {
+            main.uk-section {
+                padding: 20px 10px !important;
+            }
+
+            .uk-container-small {
+                padding: 0 10px;
+            }
+
+            h2.uk-text-center {
+                font-size: 20px;
+            }
+
+            main.uk-section>.uk-container>p {
+                font-size: 13px;
+            }
+
+            .uk-card-body {
+                padding: 15px !important;
+            }
+
+            .uk-card h3,
+            .uk-card h4 {
+                font-size: 16px !important;
+            }
+
+            .uk-card p,
+            .uk-list-bullet>li {
+                font-size: 13px !important;
+            }
+        }
+
+        /* Ensure header is responsive */
+        header .uk-heading-primary {
+            font-size: 24px !important;
+        }
+
+        @media (max-width: 767px) {
+            header .uk-heading-primary {
+                font-size: 18px !important;
+            }
+
+            header .uk-padding-small {
+                padding: 8px !important;
+            }
         }
     </style>
 </head>
@@ -19,10 +215,10 @@
         <div class="uk-container">
             <div class="uk-flex uk-flex-between uk-flex-middle uk-padding-small">
                 <div class="brand">
-                    <h1 class="uk-heading-primary"><a href="index.html" class="logo">SLD Technologies</a></h1>
+                    <h3 class="uk-heading-primary"><a href="index.html" class="logo">SLD Technologies</a></h3>
                 </div>
-                <div class="contact-small uk-visible@s">
-                    <a href="tel:6363511990">6363511990</a>
+                <div class="logo-container">
+                    <img src="image/logo.jpeg" alt="SLD Technologies Logo" class="logo-image">
                 </div>
             </div>
         </div>
@@ -46,31 +242,62 @@
 
     <main class="uk-section uk-section-default">
         <div class="uk-container uk-container-small">
-            <h2>Request a Service</h2>
-            <form class="uk-form-stacked" action="#"
-                onsubmit="alert('This is a demo form — configure your backend.'); return false;">
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="name">Name</label>
-                    <div class="uk-form-controls"><input class="uk-input" id="name" type="text" placeholder="Your name">
+
+            <h2 class="uk-text-center uk-text-white" style="color:#e5e7eb;">Contact Information</h2>
+            <p class="uk-text-center" style="color:#e5e7eb;">
+                Reach out to us for reliable and certified electrical services across Bangalore.
+            </p>
+
+
+
+            <div class="uk-margin-large-top uk-grid-small uk-child-width-1-1" uk-grid>
+
+                <!-- Contact Card -->
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+                        <h3 class="uk-card-title">SLD Technologies</h3>
+
+                        <p>
+                            <strong>Proprietor:</strong> Akhilesh D<br>
+                            <strong>Qualification:</strong> B.E. (Electrical & Electronics Engineering)
+                        </p>
+
+                        <hr>
+
+                        <p>
+                            <strong>Mobile:</strong><br>
+                            <a href="tel:6363511990">+91 63635 11990</a>
+                        </p>
+
+                        <p>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:sldtechnologies.in@gmail.com">
+                                sldtechnologies.in@gmail.com
+                            </a>
+                        </p>
+
+                        <p>
+                            <strong>Location:</strong><br>
+                            Bangalore, India
+                        </p>
                     </div>
                 </div>
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="phone">Phone</label>
-                    <div class="uk-form-controls"><input class="uk-input" id="phone" type="tel"
-                            placeholder="Phone number"></div>
-                </div>
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="message">Message</label>
-                    <div class="uk-form-controls"><textarea class="uk-textarea" id="message" rows="4"
-                            placeholder="Brief description"></textarea></div>
-                </div>
-                <button class="uk-button uk-button-secondary">Send Request</button>
-            </form>
 
-            <h3 class="uk-margin-large-top">Contact Details</h3>
-            <p><strong>Phone:</strong> <a href="tel:6363511990">6363511990</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@electrician.example">info@electrician.example</a></p>
-            <p><strong>Address:</strong> Bangalore, India</p>
+                <!-- Extra Info Section -->
+                <div>
+                    <div class="uk-card uk-card-muted uk-card-body uk-border-rounded">
+                        <h4>Why Choose Us</h4>
+                        <ul class="uk-list uk-list-bullet">
+                            <li>Govt. Licensed Class 1 Electrical Contractor</li>
+                            <li>Award-winning & compliance-focused services</li>
+                            <li>Residential & Commercial expertise</li>
+                            <li>Emergency support & reliable workmanship</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </main>
 
